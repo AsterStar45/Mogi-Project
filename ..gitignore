@@ -1,8 +1,0 @@
-venv/
-<<<<<<< HEAD
-.env/
-=======
->>>>>>> bf6ada8866237b4c08a197f8fd8ec2572d16cbd3
-*.pyc
-__pycache__/
-node_modules/
