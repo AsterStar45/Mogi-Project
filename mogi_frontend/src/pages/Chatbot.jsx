@@ -1,5 +1,6 @@
 // src/pages/Chatbot.jsx
 import React, { useState } from 'react';
+import "../styles/Chatbot.css"; 
 
 function Chatbot() {
   const [message, setMessage] = useState('');
@@ -25,25 +26,39 @@ function Chatbot() {
   };
 
   return (
-    <div>
-      <h1>MOGI Chatbot</h1>
-      <div style={{ border: "1px solid #ccc", padding: "10px", height: "300px", overflowY: "scroll" }}>
-        {chat.map((c, i) => (
-          <div key={i}>
-            <b>Tú:</b> {c.user} <br />
-            <b>MOGI:</b> {c.bot}
-            <hr />
-          </div>
-        ))}
+    <div className="chatbot-container">
+
+      {/* --- BANNER SUPERIOR --- */}
+      <div className="chatbot-banner">
+          <img src="/Logo.png" alt="Mogi logo" className="chatbot-logo" />
+        <span className="chatbot-title">MOGI Chatbot</span>
       </div>
-      <input
-        type="text"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Escribe tu mensaje..."
-        style={{ width: "70%" }}
-      />
-      <button onClick={sendMessage} style={{ width: "25%" }}>Enviar</button>
+
+      {/* --- TARJETA DEL CHAT --- */}
+      <div className="chatbot-card">
+        <div className="chat-window">
+          {chat.map((c, i) => (
+            <div key={i} className="chat-row">
+              <div className="chat-user"><b>Tu:</b> {c.user}</div>
+              <div className="chat-bot"><b>MOGI:</b> {c.bot}</div>
+              <hr />
+            </div>
+          ))}
+        </div>
+
+        {/* INPUT */}
+        <div className="chat-input-box">
+          <input
+            type="text"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Escribe tu mensaje..."
+            className="chat-input"
+          />
+          <button onClick={sendMessage} className="chat-btn">Enviar</button>
+        </div>
+
+      </div>
     </div>
   );
 }

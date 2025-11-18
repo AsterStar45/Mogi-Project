@@ -1,0 +1,110 @@
+/* --- CONTENEDOR GENERAL --- */
+.chatbot-container {
+  height: 100vh;
+  background: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 110px;
+}
+
+/* --- BANNER SUPERIOR --- */
+.chatbot-banner {
+  width: 100%;
+  background: #466ACE;
+  padding: 6px 24px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.chatbot-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.chatbot-title {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/* --- TARJETA DEL CHAT --- */
+.chatbot-card {
+  width: 420px;
+  height: 530px;
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- CHAT WINDOW --- */
+.chat-window {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 15px;
+  overflow-y: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: #fafafa;
+}
+
+.chat-row {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.chat-user {
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.chat-bot {
+  color: #466ACE;
+}
+
+/* --- INPUT Y BOTON --- */
+.chat-input-box {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.chat-btn {
+  width: 110px;
+  background: #466ACE;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chat-btn:hover {
+  background: #3658b5;
+}
+
+/* QUITAR SCROLL DEL BODY */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
